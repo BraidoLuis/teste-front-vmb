@@ -1,5 +1,5 @@
-import { Search, Heart, User, ShoppingCart } from 'lucide-react';
-import LogoHeader from '../../assets/LogoHeader.svg';
+import { CiSearch, CiHeart, CiUser, CiShoppingCart } from "react-icons/ci";
+import LogoHeader from '../../assets/Logo.svg';
 
 export default function Header() {
     return (
@@ -19,10 +19,10 @@ export default function Header() {
                 </div>
                 <div className='flex-1 flex justify-end'>
                     <nav className="space-x-4">
-                        <Search className="inline-block w-9 h-9 text-[#61A9CC] hover:text-gray-800 cursor-pointer" />
-                        <Heart className="inline-block w-9 h-9 text-[#61A9CC] hover:text-gray-800 cursor-pointer" />
-                        <User className="inline-block w-9 h-9 text-[#61A9CC] hover:text-gray-800 cursor-pointer" />
-                        <ShoppingCart className="inline-block w-9 h-9 text-[#61A9CC] hover:text-gray-800 cursor-pointer" />
+                        <CiSearch className="inline-block w-9 h-9 text-[#61A9CC] hover:text-gray-800 cursor-pointer" />
+                        <CiHeart className="inline-block w-9 h-9 text-[#61A9CC] hover:text-gray-800 cursor-pointer" />
+                        <CiUser className="inline-block w-9 h-9 text-[#61A9CC] hover:text-gray-800 cursor-pointer" />
+                        <CiShoppingCart className="inline-block w-9 h-9 text-[#61A9CC] hover:text-gray-800 cursor-pointer" />
                     </nav>
                 </div>
                     

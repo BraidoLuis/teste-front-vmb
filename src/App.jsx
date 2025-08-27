@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+
 import Header from './components/Navigation/Header';
 import Footer from './components/Navigation/Footer';
 import Banner from './components/Main/Banner';
@@ -9,17 +10,17 @@ import Classic from './components/Main/Classic';
 import Colection from './components/Main/Colection';
 import News from './components/Main/News';
 
+
 export default function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // useEffect para buscar os dados da API quando o App montar
   useEffect(() => {
     const fetchAllProducts = async () => {
       try {
         setLoading(true);
-        // AQUI ESTÁ A CHAMADA À API
+
         const response = await fetch('https://fakestoreapi.com/products');
         if (!response.ok) {
           throw new Error('Erro ao carregar os produtos da API');
@@ -36,20 +37,14 @@ export default function App() {
     };
 
     fetchAllProducts();
-  }, []); // O array vazio [] garante que a busca ocorra apenas uma vez
+  }, []); 
 
-  // Se estiver carregando ou com erro, mostre uma mensagem na página inteira
   if (loading) {
     return <div className="text-center py-40">Carregando produtos...</div>;
   }
   if (error) {
     return <div className="text-center py-40 text-red-600">Erro: {error}</div>;
   }
-
-  // Divida os dados da API em fatias para cada seção
-  const novidades = allProducts.slice(0, 4);
-  const maisVendidos = allProducts.slice(4, 8);
-  const tecnologia = allProducts.slice(8, 12);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -59,9 +54,10 @@ export default function App() {
       <main>
         <Banner />
         <Benefits />
-        <Products productsNovidades={novidades} productsMaisVendidos={maisVendidos} />
+        <Products allProducts={allProducts} />
         <Classic />
-        <Colection productsCamadas={tecnologia} />
+        <Colection allProducts={allProducts} />
+        
         <News />
       </main>
       <Footer />

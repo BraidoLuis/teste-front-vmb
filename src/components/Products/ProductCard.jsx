@@ -28,7 +28,7 @@ export default function ProductCard({ product }) {
         <p className="text-lg font-medium text-gray-900 mb-4 mt-6">
           {formatPrice(product.price)}
         </p>
-        <button className="w-full bg-[#61A9CC] text-white uppercase py-2 text-sm font-semibold hover:bg-[#5390ae] transition-colors duration-300 rounded-[5px] cursor-pointer">
+        <button className="w-full bg-[#61A9CC] text-white uppercase py-2 text-sm font-semibold hover:bg-[#5390ae] transition-colors duration-300 hover:shadow-lg rounded-[5px] cursor-pointer">
           Comprar
         </button>
       </div>

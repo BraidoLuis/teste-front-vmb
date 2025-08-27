@@ -1,1 +1,24 @@
 @import 'tailwindcss';
+
+.swiper {
+  padding-bottom: 40px !important;
+}
+
+/* 2. Posiciona as bolinhas da paginação nesse novo espaço, a 10px da borda */
+.swiper-pagination {
+    bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+    background: #CBD5E0 !important; 
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #61A9CC !important; 
+}
+
+.swiper-navigation-button {
+    color: #61A9CC !important; 
+}

@@ -1,14 +1,13 @@
-// src/components/Products/Products.jsx
-
 import ProductSection from './ProductSection';
 
-// O componente agora recebe as listas de produtos como props
-export default function Products({ productsNovidades, productsMaisVendidos }) {
+export default function Products({ allProducts}) {
+  const novidades = allProducts.slice(0, 8); 
+  const maisVendidos = allProducts.slice(12, 20);
   return (
     <div className="bg-white py-12">
       <div className="container mx-auto px-4">
-        <ProductSection title="Novidades" products={productsNovidades} />
-        <ProductSection title="Mais Vendidos" products={productsMaisVendidos} />
+        <ProductSection title="Novidades" products={novidades} isCarousel={true}/>
+        <ProductSection title="Mais Vendidos" products={maisVendidos} isCarousel={true}/>
       </div>
     </div>
   );
