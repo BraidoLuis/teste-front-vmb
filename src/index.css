@@ -1,12 +1,22 @@
 @import 'tailwindcss';
 
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..28&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap);
+
+
+@theme{
+    --font-nunito: 'Nunito', sans-serif;
+    --font-hedvig: 'Hedvig Letters Serif', serif;
+    --font-hedvig-sans: 'Hedvig Letters Sans', sans-serif;
+}
+
 .swiper {
   padding-bottom: 40px !important;
 }
 
-/* 2. Posiciona as bolinhas da paginação nesse novo espaço, a 10px da borda */
 .swiper-pagination {
-    bottom: 10px !important;
+    bottom: 0px !important;
 }
 
 .swiper-pagination-bullet {

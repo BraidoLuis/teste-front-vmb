@@ -5,7 +5,7 @@ export default function Products({ allProducts}) {
   const maisVendidos = allProducts.slice(12, 20);
   return (
     <div className="bg-white py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <ProductSection title="Novidades" products={novidades} isCarousel={true}/>
         <ProductSection title="Mais Vendidos" products={maisVendidos} isCarousel={true}/>
       </div>
