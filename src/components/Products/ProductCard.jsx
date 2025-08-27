@@ -25,7 +25,7 @@ export default function ProductCard({ product }) {
         <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-700 mb-2 h-10">
           {product.title}
         </h3>
-        <p className="text-lg font-medium text-gray-900 mb-4">
+        <p className="text-lg font-medium text-gray-900 mb-4 mt-6">
           {formatPrice(product.price)}
         </p>
         <button className="w-full bg-[#61A9CC] text-white uppercase py-2 text-sm font-semibold hover:bg-[#5390ae] transition-colors duration-300 rounded-[5px] cursor-pointer">
