@@ -1,6 +1,4 @@
-import ProductSection from '../Products/ProductSection'; // Ajuste o caminho
-
-
+import ProductSection from '../Products/ProductSection'; 
 
 export default function Colection({ allProducts }) {
 

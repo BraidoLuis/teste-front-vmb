@@ -1,15 +1,15 @@
-// src/components/Navigation/Footer.jsx
 import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa"; 
-import Logo from  '../../assets/Logo.svg'// Certifique-se que o nome do arquivo é este ou ajuste
-import Pagamento from '../../assets/Payment.svg'; // Imagem com os ícones de pagamento
+import Logo from  '../../assets/Logo.svg'
+import Pagamento from '../../assets/Payment.svg'; 
 import { useState } from "react";
 import { IoAddOutline, IoRemoveOutline } from "react-icons/io5";
+import { LuLanguages } from "react-icons/lu";
 
 const AccordionItem = ({ title, children, isOpen, onClick }) => (
   <div className="border-b border-gray-200 py-4">
     <button onClick={onClick} className="w-full flex justify-between items-center text-left">
       <h3 className="font-hedvig-serif uppercase tracking-wider text-gray-700">{title}</h3>
-      {/* 2. Trocando os ícones da Lucide pelos da react-icons */}
+     
       {isOpen ? <IoRemoveOutline size={20} /> : <IoAddOutline size={20} />}
     </button>
     {isOpen && (
@@ -26,8 +26,28 @@ export default function Footer() {
     const [openAccordion, setOpenAccordion] = useState(null);
 
     const handleAccordionClick = (title) => {
-    setOpenAccordion(openAccordion === title ? null : title);
+        setOpenAccordion(openAccordion === title ? null : title);
     };
+
+    const LanguageSelector = () => (
+        <div className="w-full">
+            <h3 className="font-hedvig-serif uppercase tracking-wider text-gray-700 mb-4">Idioma</h3>
+            <div className="relative">
+            <select defaultValue="pt-br" className="w-full appearance-none bg-white border border-gray-300 text-gray-600 py-3 px-4 pr-8 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
+                <option value="pt-br">Português (Brasil)</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="zh">中文 (Chinese)</option>
+            </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                    <LuLanguages size={20} />
+                </div>
+            </div>
+        </div>
+    );
 
     return (
         <footer className="bg-white text-gray-500 font-light">
@@ -134,6 +154,10 @@ export default function Footer() {
                     </div>
                 </AccordionItem>
 
+                <div className="py-6 border-b border-gray-200">
+                    <LanguageSelector />
+                </div>
+
                 <div className="xl:col-span-2 mt-8 flex justify-center">
                     <div className="flex items-center gap-6">
                         <a href="#" aria-label="Whatsapp" className="text-[#61A9CC] hover:text-gray-700"><FaWhatsapp size={24} /></a>
@@ -148,7 +172,7 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-gray-200 mt-12 mb-6"></div>
-                
+
                 <div className="text-left text-xs text-gray-400 font-medium font-hedvig-sans">
                     <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora.</p>
                 </div>

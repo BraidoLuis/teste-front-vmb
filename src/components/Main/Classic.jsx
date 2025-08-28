@@ -4,14 +4,11 @@ export default function Classic() {
     return (
         <section className="container mx-auto p-10">
             <div className='flex flex-col md:flex-row items-center gap-12'>
-                
-                {/* Coluna da Imagem */}
+
                 <div className='w-full md:w-1/2'>
-                    {/* Corrigido o typo e melhorado para ser responsivo */}
                     <img src={NewClassic} alt='Imagem novo clássico' className='w-full h-auto rounded-[3px] shadow-lg'></img>
                 </div>
-                
-                {/* Coluna do Texto */}
+
                 <div className='w-full md:w-1/2'>
                     <h2 className="font-hedvig text-3xl text-[#61A9CC] font-bold mb-4">Novo Clássico</h2>
             

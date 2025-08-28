@@ -10,13 +10,13 @@ import Products from './components/Products/Products';
 import Classic from './components/Main/Classic';
 import Colection from './components/Main/Colection';
 import News from './components/Main/News';
+import CartSidebar from './components/cart/CartSidebar';
 
 
 export default function App() {
-  // 2. Usamos o hook com uma única linha para obter tudo o que precisamos!
+
   const { allProducts, loading, error } = useProducts();
 
-  // O resto do seu componente (loading, error, return) continua exatamente igual
   if (loading) {
     return <div className="text-center py-40">Carregando produtos...</div>;
   }
@@ -38,6 +38,7 @@ export default function App() {
         <News />
       </main>
       <Footer />
+      <CartSidebar />
     </div>
   );
 }

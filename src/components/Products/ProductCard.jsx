@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
   return (
     
 
-    <div className="group text-center cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+    <div className="group text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
 
       <div className="bg-gray-100 mb-4 overflow-hidden rounded-[5px]">
         <img
@@ -26,14 +26,14 @@ export default function ProductCard({ product }) {
       <div className="px-2 pb-4"> 
         <h3 
 
-          className="text-sm font-semibold uppercase tracking-wider text-gray-700 mb-2 h-10 transition-colors group-hover:text-[#61A9CC]"
+          className="text-sm font-semibold uppercase tracking-wider text-gray-700 mb-2 min-h-10 transition-colors group-hover:text-[#61A9CC]"
         >
           {product.title}
         </h3>
         <p className="text-lg font-medium text-gray-900 mb-4 mt-6">
           {formatPrice(product.price)}
         </p>
-        <button onClick={() => addToCart(product)} className="w-full bg-[#61A9CC] text-white uppercase py-2 text-sm font-semibold hover:bg-[#5390ae] transition-all duration-300 hover:shadow-lg rounded-[5px]">
+        <button onClick={() => addToCart(product)} className="w-full bg-[#61A9CC] text-white uppercase py-2 text-sm font-semibold hover:bg-[#5390ae] transition-all duration-300 hover:shadow-lg rounded-[5px] cursor-pointer">
           Comprar
         </button>
       </div>

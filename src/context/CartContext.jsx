@@ -1,22 +1,63 @@
-// src/context/CartContext.js
+import { createContext, useContext, useState, useEffect } from 'react';
 
-import { createContext, useContext } from 'react';
-import { useCart } from '../hooks/useCart'; // Importa nosso hook
-
-// Cria o contexto
+const CART_STORAGE_KEY = 'neoclassico_cart';
 const CartContext = createContext();
 
-// Cria o "Provedor", que vai "envolver" nossa aplicação
 export function CartProvider({ children }) {
-  const cartManager = useCart(); // Usa nosso hook para obter os dados do carrinho
+  // Estado para os itens do carrinho
+  const [cart, setCart] = useState(() => {
+    try {
+      const storedCart = window.localStorage.getItem(CART_STORAGE_KEY);
+      return storedCart ? JSON.parse(storedCart) : [];
+    } catch (error) {
+      return [];
+    }
+  });
+  
+  // Estado para controlar se a sidebar está aberta ou fechada
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  // Salva no localStorage sempre que o carrinho mudar
+  useEffect(() => {
+    window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+  }, [cart]);
+
+  // Funções para manipular o carrinho
+  const addToCart = (product) => {
+    const productInCart = cart.find(item => item.id === product.id);
+    if (!productInCart) {
+      setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]); // Adicionamos quantidade
+      alert(`${product.title} foi adicionado ao carrinho!`);
+    } else {
+      alert(`${product.title} já está no seu carrinho.`);
+    }
+  };
+
+  const removeFromCart = (productId) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== productId));
+  };
+  
+  // Funções para controlar a sidebar
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
+
+  const value = {
+    cart,
+    addToCart,
+    removeFromCart,
+    isCartOpen,
+    openCart,
+    closeCart,
+  };
+  
   return (
-    <CartContext.Provider value={cartManager}>
+    <CartContext.Provider value={value}>
       {children}
     </CartContext.Provider>
   );
 }
 
-// Uma forma fácil de usar o contexto nos componentes
+// Hook para facilitar o uso do contexto
 export function useCartContext() {
   return useContext(CartContext);
 }

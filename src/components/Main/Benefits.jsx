@@ -5,14 +5,8 @@ import { FaCoins, FaCreditCard } from "react-icons/fa";
 
 export default function Benefits() {
     return (
-        // Contêiner principal agora é responsivo:
-        // - flex, flex-col: empilhado no mobile
-        // - lg:flex-row: lado a lado em telas grandes
-        // - justify-between: espaça os itens horizontalmente em telas grandes
-        // - gap-8: cria um espaçamento consistente entre os itens
         <section className="container mx-auto p-10 flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-4">
             
-            {/* Benefício 1: Parcele */}
             <div className="flex items-center gap-4">
                 <FaCreditCard className="w-10 h-10 text-[#61A9CC] flex-shrink-0" />
                 <div>
@@ -21,7 +15,6 @@ export default function Benefits() {
                 </div>
             </div>
 
-            {/* Benefício 2: Desconto */}
             <div className="flex items-center gap-4">
                 <PiSealPercentLight className="w-10 h-10 text-[#61A9CC] flex-shrink-0" />
                 <div>
@@ -30,7 +23,6 @@ export default function Benefits() {
                 </div>
             </div>
 
-            {/* Benefício 3: Pontos */}
             <div className="flex items-center gap-4">
                 <FaCoins className="w-10 h-10 text-[#61A9CC] flex-shrink-0" />
                 <div>

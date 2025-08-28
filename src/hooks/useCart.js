@@ -1,13 +1,9 @@
-// src/hooks/useCart.js
-
 import { useState, useEffect } from 'react';
 
-// A chave que usaremos para salvar o carrinho no localStorage
 const CART_STORAGE_KEY = 'neoclassico_cart';
 
 export function useCart() {
-  // 1. Inicializa o estado do carrinho.
-  // Ele tenta ler do localStorage primeiro. Se não houver nada, começa com um array vazio.
+
   const [cart, setCart] = useState(() => {
     try {
       const storedCart = window.localStorage.getItem(CART_STORAGE_KEY);
@@ -18,8 +14,6 @@ export function useCart() {
     }
   });
 
-  // 2. Um 'useEffect' que observa mudanças no estado 'cart'.
-  // Toda vez que o carrinho mudar, ele salva a nova versão no localStorage.
   useEffect(() => {
     try {
       const serializedCart = JSON.stringify(cart);
@@ -29,9 +23,8 @@ export function useCart() {
     }
   }, [cart]);
 
-  // 3. Função para adicionar um produto ao carrinho
   const addToCart = (product) => {
-    // Verificamos se o produto já existe para não duplicar (opcional)
+
     const productInCart = cart.find(item => item.id === product.id);
     if (!productInCart) {
       setCart(prevCart => [...prevCart, product]);
@@ -41,11 +34,9 @@ export function useCart() {
     }
   };
 
-  // 4. Função para remover um produto (exemplo)
   const removeFromCart = (productId) => {
     setCart(prevCart => prevCart.filter(item => item.id !== productId));
   };
 
-  // 5. O hook retorna o estado do carrinho e as funções para manipulá-lo
   return { cart, addToCart, removeFromCart };
 }
