@@ -4,7 +4,7 @@ const CART_STORAGE_KEY = 'neoclassico_cart';
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  // Estado para os itens do carrinho
+
   const [cart, setCart] = useState(() => {
     try {
       const storedCart = window.localStorage.getItem(CART_STORAGE_KEY);
@@ -13,16 +13,13 @@ export function CartProvider({ children }) {
       return [];
     }
   });
-  
-  // Estado para controlar se a sidebar está aberta ou fechada
+
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Salva no localStorage sempre que o carrinho mudar
   useEffect(() => {
     window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
   }, [cart]);
 
-  // Funções para manipular o carrinho
   const addToCart = (product) => {
     const productInCart = cart.find(item => item.id === product.id);
     if (!productInCart) {
@@ -36,8 +33,7 @@ export function CartProvider({ children }) {
   const removeFromCart = (productId) => {
     setCart(prevCart => prevCart.filter(item => item.id !== productId));
   };
-  
-  // Funções para controlar a sidebar
+
   const openCart = () => setIsCartOpen(true);
   const closeCart = () => setIsCartOpen(false);
 
@@ -57,7 +53,6 @@ export function CartProvider({ children }) {
   );
 }
 
-// Hook para facilitar o uso do contexto
 export function useCartContext() {
   return useContext(CartContext);
 }

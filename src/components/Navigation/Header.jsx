@@ -22,15 +22,12 @@ export default function Header() {
     return (
         <header className='bg-white w-full relative border-b border-gray-200'>
 
-            {/* Barra azul superior (sem alterações) */}
             <div className="bg-[#61A9CC]  text-white text-center py-2 px-4">
                 <p className="hidden md:block text-xs font-nunito tracking-wider">GANHE PONTOS EM COMPRAS ACIMA DE R$ 100,00 E TROQUE POR BENEFÍCIOS EXCLUSIVOS</p>
             </div>
 
-            {/* Seção 1: Logo e Ícones - Estrutura de 3 colunas adaptada */}
             <div className="container mx-auto px-4 h-20 flex items-center">
 
-                {/* Coluna da Esquerda (w-1/3): Ícones do menu para mobile */}
                 <div className="w-1/3 flex justify-start items-center gap-4">
                     <div className="flex lg:hidden items-center gap-3">
                         <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -40,14 +37,12 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* Coluna Central (w-1/3): Logo */}
                 <div className="w-1/3 flex justify-center">
                     <img src={LogoHeader} alt="Neoclássico Logo" className="h-8" />
                 </div>
 
-                {/* Coluna da Direita (w-1/3): Ícones de usuário para mobile e desktop */}
                 <div className="w-1/3 flex justify-end items-center">
-                    {/* Ícones para mobile */}
+                   
                     <div className="flex lg:hidden items-center gap-3">
                         <CiHeart className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
                         <CiUser className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
@@ -61,7 +56,6 @@ export default function Header() {
                         </button>
                     </div>
 
-                    {/* Ícones para desktop */}
                     <div className="hidden lg:flex items-center gap-6">
                         <CiSearch className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
                         <CiHeart className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
@@ -78,7 +72,6 @@ export default function Header() {
                 </div>
             </div>
 
-            {/* Seção 2: Navegação Desktop (sem alterações) */}
             <nav className='hidden lg:flex justify-center items-center gap-8 py-4 border-t border-gray-200'>
                 {navLinks.map((link) => (
                     <a key={link.title} href="#" className='text-sm tracking-wider text-[#686868] hover:text-gray-900 font-nunito cursor-pointer'>
@@ -87,7 +80,6 @@ export default function Header() {
                 ))}
             </nav>
 
-            {/* Menu Mobile Dropdown (sem alterações) */}
             {isMenuOpen && (
                 <div className="absolute top-full left-0 w-full bg-white shadow-lg lg:hidden z-40 border-t border-gray-200">
                     <nav className="flex flex-col p-4">
