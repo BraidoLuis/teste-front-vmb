@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
 import './App.css';
+
+import { useProducts } from './hooks/useProducts';
 
 import Header from './components/Navigation/Header';
 import Footer from './components/Navigation/Footer';
@@ -12,33 +13,10 @@ import News from './components/Main/News';
 
 
 export default function App() {
-  const [allProducts, setAllProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // 2. Usamos o hook com uma única linha para obter tudo o que precisamos!
+  const { allProducts, loading, error } = useProducts();
 
-  useEffect(() => {
-    const fetchAllProducts = async () => {
-      try {
-        setLoading(true);
-
-        const response = await fetch('https://fakestoreapi.com/products');
-        if (!response.ok) {
-          throw new Error('Erro ao carregar os produtos da API');
-        }
-        const data = await response.json();
-        setAllProducts(data);
-        setError(null);
-      } catch (err) {
-        setError(err.message);
-        setAllProducts([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchAllProducts();
-  }, []); 
-
+  // O resto do seu componente (loading, error, return) continua exatamente igual
   if (loading) {
     return <div className="text-center py-40">Carregando produtos...</div>;
   }
@@ -57,7 +35,6 @@ export default function App() {
         <Products allProducts={allProducts} />
         <Classic />
         <Colection allProducts={allProducts} />
-        
         <News />
       </main>
       <Footer />

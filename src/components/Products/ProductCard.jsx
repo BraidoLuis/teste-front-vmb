@@ -1,3 +1,5 @@
+import { useCartContext } from '../../context/CartContext';
+
 const formatPrice = (price) => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -6,7 +8,9 @@ const formatPrice = (price) => {
 };
 
 export default function ProductCard({ product }) {
+  const { addToCart } = useCartContext();
   return (
+    
 
     <div className="group text-center cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
 
@@ -29,7 +33,7 @@ export default function ProductCard({ product }) {
         <p className="text-lg font-medium text-gray-900 mb-4 mt-6">
           {formatPrice(product.price)}
         </p>
-        <button className="w-full bg-[#61A9CC] text-white uppercase py-2 text-sm font-semibold hover:bg-[#5390ae] transition-all duration-300 hover:shadow-lg rounded-[5px]">
+        <button onClick={() => addToCart(product)} className="w-full bg-[#61A9CC] text-white uppercase py-2 text-sm font-semibold hover:bg-[#5390ae] transition-all duration-300 hover:shadow-lg rounded-[5px]">
           Comprar
         </button>
       </div>
