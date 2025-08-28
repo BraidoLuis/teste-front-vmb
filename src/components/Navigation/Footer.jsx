@@ -88,7 +88,7 @@ export default function Footer() {
                     <div className="border-t border-gray-200 mt-12 mb-6"></div>
 
                     <div className="text-left text-xs text-gray-400 font-medium font-hedvig-sans">
-                        <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora. Todos os direitos reservados.</p>
+                        <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora.</p>
                     </div>
                 </div>
 
@@ -140,6 +140,17 @@ export default function Footer() {
                         <a href="#" aria-label="Instagram" className="text-[#61A9CC] hover:text-gray-700"><FaInstagram size={24} /></a>
                         <a href="#" aria-label="Facebook" className="text-[#61A9CC] hover:text-gray-700"><FaFacebook size={24} /></a>
                     </div>
+                </div>
+                <div className="lg:col-span-3 xl:col-span-4 mt-8 flex flex-col items-center">
+                    <h3 className="font-semibold font-hedvig uppercase tracking-wider text-gray-600 mb-4 text-sm">Meios de Pagamento</h3>
+
+                    <img src={Pagamento} alt="Meios de Pagamento" className="h-8 bg-[#61A9CC] rounded-[2px]"/>
+                </div>
+
+                <div className="border-t border-gray-200 mt-12 mb-6"></div>
+                
+                <div className="text-left text-xs text-gray-400 font-medium font-hedvig-sans">
+                    <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora.</p>
                 </div>
                 </div>
                 
