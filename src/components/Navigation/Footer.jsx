@@ -32,7 +32,7 @@ export default function Footer() {
 
     const LanguageSelector = () => (
         <div className="w-full">
-            <h3 className="font-hedvig-serif uppercase tracking-wider text-gray-700 mb-4">Idioma</h3>
+            <h3 className="font-hedvig-serif uppercase tracking-wider text-gray-700 mb-4 flex justify-center">Idioma</h3>
             <div className="relative">
             <select defaultValue="pt-br" className="w-full appearance-none bg-white border border-gray-300 text-gray-600 py-3 px-4 pr-8 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400">
                 <option value="pt-br">Português (Brasil)</option>
@@ -109,7 +109,7 @@ export default function Footer() {
                     <div className="border-t border-gray-200 mt-12 mb-6"></div>
 
                     <div className="text-left text-xs text-gray-400 font-medium font-hedvig-sans">
-                        <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora.</p>
+                        <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora Coders.</p>
                     </div>
                 </div>
 
@@ -175,7 +175,7 @@ export default function Footer() {
                 <div className="border-t border-gray-200 mt-12 mb-6"></div>
 
                 <div className="text-left text-xs text-gray-400 font-medium font-hedvig-sans">
-                    <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora.</p>
+                    <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora Coders.</p>
                 </div>
 
             </div>
