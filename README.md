@@ -1,16 +1,52 @@
-<<<<<<< HEAD
-# React + Vite
+# Mini E-commerce "Neoclássico"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de front-end para um mini e-commerce de decoração, focado em criar uma experiência de usuário moderna, responsiva e rica em funcionalidades. O projeto foi desenvolvido de forma iterativa, evoluindo de uma estrutura simples para uma arquitetura robusta e escalável com React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+* **Design Responsivo (Mobile-First):** Layouts que se adaptam perfeitamente a qualquer tamanho de tela, de celulares a desktops.
+* **Componentização com React:** Interface construída com componentes reutilizáveis e funcionais (`Header`, `Footer`, `ProductCard`, etc.).
+* **Gerenciamento de Estado Global:** Uso da Context API do React para gerenciar o estado do carrinho de compras em toda a aplicação.
+* **Carrosséis de Produtos:** Seções de produtos interativas com navegação e paginação, implementadas com Swiper.js.
+* **Carrinho de Compras Funcional:**
+    * Adicionar e remover itens.
+    * Persistência de dados no `localStorage` (o carrinho sobrevive ao recarregamento da página).
+    * Sidebar (drawer) animada para visualização do carrinho.
+* **Notificações (Toasts):** Feedback moderno e não-intrusivo para o usuário com a biblioteca Sonner.
+* **Lógica Abstraída (Custom Hooks):** A lógica de negócio (busca de dados e gerenciamento do carrinho) foi extraída para hooks customizados (`useProducts`, `useCart`), seguindo as melhores práticas do React.
+* **Efeitos de UI Modernos:** Hover effects sutis para melhorar o feedback visual e a interatividade.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Teste-Vambora
->>>>>>> bb5037e71f5e86562fbec811bcba763aad3490aa
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **React 18** (com Vite)
+* **Tailwind CSS** para estilização utilitária
+* **Swiper.js** para carrosséis
+* **Sonner** para notificações (toasts)
+* **React Icons** para iconografia
+* **Git & GitHub** para versionamento de código
+
+---
+
+## 🚀 Como Rodar o Projeto Localmente
+
+Para baixar e executar o projeto no seu computador, você precisará ter o [Git](https://git-scm.com/) e o [Node.js](https://nodejs.org/en/) (versão 18 ou superior) instalados.
+
+Depois, siga estes passos no seu terminal:
+
+**1. Clone, instale e rode o projeto com os seguintes comandos:**
+```bash
+# Clone o repositório para a sua máquina
+git clone https://github.com/BraidoLuis/teste-front-vmb.git
+
+# Navegue para a pasta recém-criada
+cd teste-front-vmb
+
+# Instale todas as dependências do projeto
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
