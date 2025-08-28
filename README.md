@@ -1,6 +1,7 @@
-# Mini E-commerce "Neoclássico"
+# Mini E-commerce 
 
-Este é um projeto de front-end para um mini e-commerce de decoração, focado em criar uma experiência de usuário moderna, responsiva e rica em funcionalidades. O projeto foi desenvolvido de forma iterativa, evoluindo de uma estrutura simples para uma arquitetura robusta e escalável com React.
+Este é um projeto de front-end para um mini e-commerce de decoração, com foco em testar o conhecimentos nas tecnologias
+React, HTML, CSS e JavaScript.
 
 ---
 
