@@ -1,6 +1,7 @@
 import './App.css';
 
 import { useProducts } from './hooks/useProducts';
+import { Toaster } from 'sonner';
 
 import Header from './components/Navigation/Header';
 import Footer from './components/Navigation/Footer';
@@ -39,6 +40,7 @@ export default function App() {
       </main>
       <Footer />
       <CartSidebar />
+      <Toaster richColors />
     </div>
   );
 }

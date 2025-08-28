@@ -1,5 +1,3 @@
-// src/components/Main/Benefits.jsx
-
 import { PiSealPercentLight } from "react-icons/pi";
 import { FaCoins, FaCreditCard } from "react-icons/fa";
 

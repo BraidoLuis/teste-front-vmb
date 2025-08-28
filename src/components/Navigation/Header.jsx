@@ -1,5 +1,3 @@
-// src/components/Navigation/Header.jsx
-
 import { useState } from 'react';
 import { CiSearch, CiHeart, CiUser, CiShoppingCart, CiMenuFries } from "react-icons/ci";
 import LogoHeader from '../../assets/Logo.svg';
@@ -46,7 +44,7 @@ export default function Header() {
                     <div className="flex lg:hidden items-center gap-3">
                         <CiHeart className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
                         <CiUser className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
-                        <button onClick={openCart} className="relative text-[#686868] hover:text-gray-800">
+                        <button onClick={openCart} className="relative text-[#686868] hover:text-gray-800 cursor-pointer">
                             <CiShoppingCart className="w-7 h-7" />
                             {cart.length > 0 && (
                                 <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
@@ -57,10 +55,10 @@ export default function Header() {
                     </div>
 
                     <div className="hidden lg:flex items-center gap-6">
-                        <CiSearch className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
-                        <CiHeart className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
-                        <CiUser className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer" />
-                        <button onClick={openCart} className="relative text-[#686868] hover:text-gray-800">
+                        <CiSearch className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer hover:scale-110" />
+                        <CiHeart className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer hover:scale-110" />
+                        <CiUser className="w-7 h-7 text-[#686868] hover:text-gray-800 cursor-pointer hover:scale-110" />
+                        <button onClick={openCart} className="relative text-[#686868] hover:text-gray-800 cursor-pointer hover:scale-110">
                             <CiShoppingCart className="w-7 h-7" />
                             {cart.length > 0 && (
                                 <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
@@ -72,7 +70,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <nav className='hidden lg:flex justify-center items-center gap-8 py-4 border-t border-gray-200'>
+            <nav className='hidden lg:flex justify-center items-center gap-8 py-4 border-t border-gray-200 '>
                 {navLinks.map((link) => (
                     <a key={link.title} href="#" className='text-sm tracking-wider text-[#686868] hover:text-gray-900 font-nunito cursor-pointer'>
                         {link.title}
@@ -85,7 +83,7 @@ export default function Header() {
                     <nav className="flex flex-col p-4">
                         {navLinks.map((link) => (
                             <a key={link.title} href="#" className='py-3 px-2 text-left text-md text-[#686868] hover:bg-gray-50'>
-                                {link.title}
+                                {link.title} 
                             </a>
                         ))}
                     </nav>

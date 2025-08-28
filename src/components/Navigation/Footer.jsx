@@ -1,9 +1,10 @@
-import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa"; 
 import Logo from  '../../assets/Logo.svg'
 import Pagamento from '../../assets/Payment.svg'; 
 import { useState } from "react";
+import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa"; 
 import { IoAddOutline, IoRemoveOutline } from "react-icons/io5";
 import { LuLanguages } from "react-icons/lu";
+
 
 const AccordionItem = ({ title, children, isOpen, onClick }) => (
   <div className="border-b border-gray-200 py-4">
@@ -92,8 +93,8 @@ export default function Footer() {
                         <div className="xl:col-span-2 mt-8">
                             <h3 className="font-semibold font-hedvig uppercase tracking-wider text-gray-600 mb-4 text-sm">Nossas Redes</h3>
                             <div className="flex items-center gap-6">
-                                <a href="#" aria-label="Whatsapp" className="text-[#61A9CC] hover:text-gray-700"><FaWhatsapp size={24} /></a>
-                                <a href="#" aria-label="Instagram" className="text-[#61A9CC] hover:text-gray-700"><FaInstagram size={24} /></a>
+                                <a href="https://wa.me/5521988124064" target='_blank' aria-label="Whatsapp" className="text-[#61A9CC] hover:text-gray-700"><FaWhatsapp size={24} /></a>
+                                <a href="https://www.instagram.com/luis_braido/" target='_blank' aria-label="Instagram" className="text-[#61A9CC] hover:text-gray-700"><FaInstagram size={24} /></a>
                                 <a href="#" aria-label="Facebook" className="text-[#61A9CC] hover:text-gray-700"><FaFacebook size={24} /></a>
                             </div>
                         </div>
@@ -160,8 +161,8 @@ export default function Footer() {
 
                 <div className="xl:col-span-2 mt-8 flex justify-center">
                     <div className="flex items-center gap-6">
-                        <a href="#" aria-label="Whatsapp" className="text-[#61A9CC] hover:text-gray-700"><FaWhatsapp size={24} /></a>
-                        <a href="#" aria-label="Instagram" className="text-[#61A9CC] hover:text-gray-700"><FaInstagram size={24} /></a>
+                        <a href="https://wa.me/5521988124064" target='_blank' aria-label="Whatsapp" className="text-[#61A9CC] hover:text-gray-700"><FaWhatsapp size={24} /></a>
+                        <a href="https://www.instagram.com/luis_braido/" target='_blank' aria-label="Instagram" className="text-[#61A9CC] hover:text-gray-700"><FaInstagram size={24} /></a>
                         <a href="#" aria-label="Facebook" className="text-[#61A9CC] hover:text-gray-700"><FaFacebook size={24} /></a>
                     </div>
                 </div>
@@ -176,7 +177,8 @@ export default function Footer() {
                 <div className="text-left text-xs text-gray-400 font-medium font-hedvig-sans">
                     <p>&copy; 2025 Luís Felipe dos Santos Braido, Vambora.</p>
                 </div>
-                </div>
+
+            </div>
                 
                 
             </div>
