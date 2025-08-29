@@ -8,9 +8,9 @@ export default function Header() {
     const { cart, openCart } = useCartContext();
     const navLinks = [
         { title: 'QUADROS' },
-        { title: 'LUMINÁRIAS' },
-        { title: 'ALMOFADAS' },
-        { title: 'MESAS DE CENTRO' },
+        { title: 'JOIAS' },
+        { title: 'ELETRÔNICOS' },
+        { title: 'ROUPAS' },
         { title: 'MANTAS' },
         { title: 'OBJETOS DECORATIVOS' },
         { title: 'COLEÇÕES' },
