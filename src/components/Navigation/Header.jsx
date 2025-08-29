@@ -11,7 +11,7 @@ export default function Header() {
         { title: 'JOIAS' },
         { title: 'ELETRÔNICOS' },
         { title: 'ROUPAS' },
-        { title: 'MANTAS' },
+        { title: 'MOCHILAS' },
         { title: 'OBJETOS DECORATIVOS' },
         { title: 'COLEÇÕES' },
         { title: 'RASTREIO DE PEDIDOS' },
